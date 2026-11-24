@@ -1,0 +1,131 @@
+:root {
+  --q-primary: #1976d2;
+  --q-secondary: #26a69a;
+  font-family: Roboto, Arial, sans-serif;
+  color: #17324d;
+  background: #fff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+.public-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  height: 72px;
+  border-bottom: 1px solid #e7ecf2;
+  background: rgba(255, 250, 245, 0.96);
+  backdrop-filter: blur(12px);
+}
+
+.public-toolbar {
+  width: min(1180px, calc(100% - 40px));
+  height: 72px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #102a43;
+  font-size: 18px;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.public-nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.public-nav a {
+  color: #526578;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.public-nav a:hover {
+  color: var(--q-primary);
+}
+
+.public-sign-in {
+  min-width: 88px;
+  padding: 10px 16px;
+  border: 1px solid var(--q-primary);
+  border-radius: 8px;
+  color: var(--q-primary);
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+.public-sign-in:hover {
+  background: var(--q-primary);
+  color: #fff;
+}
+
+@media (max-width: 760px) {
+  .public-toolbar {
+    width: calc(100% - 24px);
+  }
+
+  .public-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .public-header,
+  .public-toolbar {
+    height: 64px;
+  }
+
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+  }
+
+  .brand-button {
+    font-size: 15px;
+  }
+
+  .public-sign-in {
+    min-width: 80px;
+    padding: 9px 12px;
+  }
+}
